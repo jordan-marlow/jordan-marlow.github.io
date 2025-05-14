@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Your Name | Backend & Data Engineer</title>
+  <title>Jordan Marlow | Backend & Data Engineer</title>
   <style>
     body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; background: #f4f4f4; color: #333; }
     header, footer { background: #222; color: #fff; padding: 20px 0; text-align: center; }
@@ -13,6 +13,37 @@
     .projects { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
     .project { background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
     @media (max-width: 600px) { .projects { grid-template-columns: 1fr; } }
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-top: 1rem;
+    }
+    .card {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+    .card h3 {
+      margin-top: 0;
+    }
+    .tag {
+      display: inline-block;
+      background: #007acc;
+      color: white;
+      padding: 3px 8px;
+      border-radius: 6px;
+      font-size: 0.8em;
+      margin-top: 10px;
+      margin-right: 5px;
+    }
+
   </style>
 </head>
 <body>
@@ -29,17 +60,24 @@
     </section>
 
     <section>
-      <h2>Featured Projects</h2>
+      <h2>Projects</h2>
       <div class="projects">
-        <div class="project">
+        <div class="card">
           <h3><a href="https://github.com/yourusername/forecastify-go">forecastify-go</a></h3>
-          <p>Scalable forecasting API using Go and time-series models.</p>
+          <p>Scalable forecasting API in Go with Gin, Docker, and Prometheus.</p>
+          <span class="tag">Go</span> <span class="tag">Forecasting</span>
         </div>
-        <div class="project">
+        <div class="card">
           <h3><a href="https://github.com/yourusername/grepcon">grepcon</a></h3>
-          <p>Concurrent CLI tool for regex-based search, written in Go.</p>
+          <p>Fast, concurrent CLI tool for regex search across files.</p>
+          <span class="tag">Go</span> <span class="tag">Concurrency</span>
         </div>
-        <!-- Add more projects here -->
+        <div class="card">
+          <h3><a href="https://github.com/yourusername/data-pipeline-python">data-pipeline-python</a></h3>
+          <p>ETL pipeline for data ingestion and transformation with Airflow and Pandas.</p>
+          <span class="tag">Python</span> <span class="tag">ETL</span>
+        </div>
+        <!-- Add more cards as needed -->
       </div>
     </section>
 
