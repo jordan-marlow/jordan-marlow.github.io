@@ -10,15 +10,7 @@
     .container { max-width: 900px; margin: auto; padding: 20px; }
     h1, h2 { color: #111; }
     a { color: #007acc; text-decoration: none; }
-    .projects { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-    .project { background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-    @media (max-width: 600px) { .projects { grid-template-columns: 1fr; } }
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-      margin-top: 1rem;
-    }
+    .projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 1rem; }
     .card {
       background: white;
       border-radius: 10px;
@@ -44,7 +36,7 @@
       margin-right: 5px;
     }
     header {
-      background: linear-gradient(135deg, #00b4db, #0083b0); /* light teal to deep blue */
+      background: linear-gradient(135deg, #00b4db, #0083b0);
       color: white;
       padding: 60px 20px;
       text-align: center;
@@ -58,8 +50,11 @@
       margin-top: 10px;
       opacity: 0.9;
     }
-
-
+    .github-link {
+      display: inline-block;
+      margin-top: 10px;
+      font-size: 0.9em;
+    }
   </style>
 </head>
 <body>
@@ -75,62 +70,17 @@
   <div class="container">
     <section>
       <h2>About Me</h2>
-      <p>I'm a backend-focused software engineer specializing in data pipelines, scalable architecture and APIs.
-        I have a passion for building efficient systems and love creating interfaces that make data accessible and actionable to frontend developers.
-        I have experience with Go, Python, and various data technologies. I enjoy solving complex problems and am always eager to learn new technologies and methodologies.
-        I enjoy working in collaborative environments and thrive in fast-paced settings.
-        I am currently looking for opportunities to leverage my skills in backend development and data engineering.  I am particularly interested in roles that involve working with a team of developers to build scalable systems and data pipelines.
-        I am also interested in roles that allow me to work with data and analytics, as I believe that data is a powerful tool for driving business decisions and improving processes.
+      <p>
+        I'm a backend-focused software engineer passionate about building scalable systems and data pipelines.
+        I specialize in Go, Python, and modern data tools, with experience designing APIs and automating workflows in cloud environments.
       </p>
+      <ul>
+        <li>🔧 Enjoy building tools that make data more accessible to developers</li>
+        <li>📊 Interested in roles involving data engineering and infrastructure</li>
+        <li>🚀 Thrive in collaborative, fast-paced environments</li>
+      </ul>
     </section>
 
-    <section>
-      <h2>Projects</h2>
-      <p> These are hosted on Railway.com for free.  Just click the title of the cards below to check it out!</p>
-      <div class="projects">
-        <div class="card">
-          <h3><a href="https://randomapis-production.up.railway.app/" target="_blank" rel="noopener noreferrer">Math APIs</a></h3>
-          <p>Backend APIs to calculate Numerical Integrals, Derivatives, Limits, Area and Perimeters of squares and circles, and Coordinate conversions. There are also some other goodies here to check out.</p>
-          <span class="tag">Go</span> <span class="tag">API</span> <span class="tag">Gin</span>
-        </div>
-        <div class="card">
-          <h3><a href="https://web-production-9e2e9.up.railway.app/" target="_blank" rel="noopener noreferrer">Python Weather Map</a></h3>
-          <p>Flask backend to pull weather alerts from NWS and plots them on a map with radar reflectivity.</p>
-          <span class="tag">Python</span> <span class="tag">Flask</span>
-        </div>
-        <div class="card">
-          <h3><a href="#">Coming Soon</a></h3>
-          <p>Coming Soon</p>
-        </div>
-        <!-- Add more cards as needed -->
-      </div>
-    </section>
-    <section>
-      <h2>Work Skills/Projects</h2>
-      <div class="projects">
-        <div class="card">
-          <h3>Django Backend</h3>
-          <p>Created a Django backend APIs for frontend developers to leverage large amounts of data for business reporting and roll-ups.</p>
-          <span class="tag">Python</span> <span class="tag">Django</span> <span class="tag">Azure</span> <span class="tag">PostgreSQL</span>
-        </div>
-        <div class="card">
-          <h3>3D Visualizations</h3>
-          <p>Created WSG84 accurate globe in order to plot threats and interceptor trajectories from Ballistic Missile Defense Simulations.</p>
-          <span class="tag">JavaScript</span> <span class="tag">Three.js</span> <span class="tag">Blender</span>
-        </div>
-        <div class="card">
-          <h3>Data Visualization</h3>
-          <p>Created a GUI for filtering, sorting, tabulating, and plotting all sorts of data tables in various formats.  Some of the formats include ingesting from CSV, Excel, HDF5, as well as database connectors.</p>
-          <span class="tag">Python</span> <span class="tag">PyQt</span>
-        </div>
-        <div class="card">
-          <h3>Complex Math</h3>
-          <p>Derived equations to convert different geo-spatial coordinates into other coordinate systems.</p>
-          <span class="tag">Python</span> <span class="tag">ETL</span>
-        </div>
-        <!-- Add more cards as needed -->
-      </div>
-    </section>
     <section>
       <h2>Skills</h2>
       <ul>
@@ -141,6 +91,51 @@
         <li>Cloud: AWS, GCP, Azure</li>
         <li>Version Control: Git</li>
       </ul>
+    </section>
+
+    <section>
+      <h2>Projects</h2>
+      <p>These are hosted on Railway.com. Click the title to view live, or check out the source code on GitHub.</p>
+      <div class="projects">
+        <div class="card">
+          <h3><a href="https://randomapis-production.up.railway.app/" target="_blank" rel="noopener noreferrer">Math APIs</a></h3>
+          <p>Backend APIs for numerical calculus, geometry, and coordinate systems, built in Go.</p>
+          <span class="tag">Go</span> <span class="tag">API</span> <span class="tag">Gin</span>
+          <div class="github-link"><a href="https://github.com/your-username/math-apis" target="_blank">View on GitHub</a></div>
+        </div>
+        <div class="card">
+          <h3><a href="https://web-production-9e2e9.up.railway.app/" target="_blank" rel="noopener noreferrer">Python Weather Map</a></h3>
+          <p>Flask backend that fetches NWS weather alerts and overlays them on radar maps.</p>
+          <span class="tag">Python</span> <span class="tag">Flask</span>
+          <div class="github-link"><a href="https://github.com/your-username/weather-map" target="_blank">View on GitHub</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Work Projects</h2>
+      <div class="projects">
+        <div class="card">
+          <h3>Django Reporting Backend</h3>
+          <p>Built APIs in Django to serve frontend teams with business rollups, dashboards, and reporting data pipelines.</p>
+          <span class="tag">Python</span> <span class="tag">Django</span> <span class="tag">PostgreSQL</span> <span class="tag">Azure</span>
+        </div>
+        <div class="card">
+          <h3>3D Defense Visualizer</h3>
+          <p>Used Three.js and Blender to create WGS84-accurate 3D threat trajectories for missile defense simulation.</p>
+          <span class="tag">JavaScript</span> <span class="tag">Three.js</span> <span class="tag">Blender</span>
+        </div>
+        <div class="card">
+          <h3>Data Analysis GUI</h3>
+          <p>Desktop app for filtering, visualizing, and exporting tabular data across formats like CSV, Excel, HDF5.</p>
+          <span class="tag">Python</span> <span class="tag">PyQt</span>
+        </div>
+        <div class="card">
+          <h3>Coordinate Conversion Library</h3>
+          <p>Converted between geospatial formats and coordinate systems. Used in ETL pipelines.</p>
+          <span class="tag">Python</span> <span class="tag">ETL</span>
+        </div>
+      </div>
     </section>
 
     <section>
